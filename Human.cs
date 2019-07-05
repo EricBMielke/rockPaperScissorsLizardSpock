@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    public class Human : User
+    public class Human : Player
     {
         public string userName;
         public string humanGesture;
 
-        public override void chooseName()
+        public override void ChooseName()
         {
             Console.WriteLine("What is your name?");
             string userName = Console.ReadLine();
         }
-         public override void sendGesture()
+        public override void SendGesture()
         {
-        Console.WriteLine("What action do you choose? (Scissors/Rock/Paper/Lizard/Spock");
-             string humanGesture = Console.ReadLine();
+            Console.WriteLine("What action do you choose? (Scissors/Rock/Paper/Lizard/Spock");
+            string humanGesture = Console.ReadLine();
         }
     }
 }

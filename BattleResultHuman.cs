@@ -12,7 +12,7 @@ namespace RPSLS
         public string secondAction;
         public void Battle()
         {
-            Console.WriteLine ("Welcome to RPSLS.  Your selection will be pitted against an opponent, either a human or a computer.")
+            Console.WriteLine("Welcome to RPSLS.  Your selection will be pitted against an opponent, either a human or a computer.");
             Console.WriteLine("Player 1. What is your choice?");
             string firstAction = Console.ReadLine();
             Console.WriteLine("Player 2. What is your choice?");

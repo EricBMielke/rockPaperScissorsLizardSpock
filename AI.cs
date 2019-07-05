@@ -6,23 +6,28 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    public class AI : User
+    public class AI : Player
     {
         public string userName;
         public string humanGesture;
         string[] gestures = new string[] { "Scissors","Rock","Paper","Lizard","Spock" };
-        public override void sendGesture()
+        public override void SendGesture()
         {
             Console.WriteLine("What action do you choose? (Scissors/Rock/Paper/Lizard/Spock");
             string humanGesture = Console.ReadLine();
         }
-        public string returnSelection(string gestures)
+        public override void ChooseName()
         {
-            Random rand = new Random();
-            string index = rand.Next(gestures.Count);
-            var gesture = gestures[index];
-            gestures.RemoveAt(index);
-            return gesture;
+            string userName = "Arty Intelligence";
+            Console.WriteLine("User 2 is " + userName);
         }
+        // string returnSelection(string gestures)
+        //{
+        //    Random rand = new Random();
+        //    string index = rand.Next(gestures.Count);
+        //    var gesture = gestures[index];
+        //    gestures.RemoveAt(index);
+        //    return gesture;
+        //}
     }
 }

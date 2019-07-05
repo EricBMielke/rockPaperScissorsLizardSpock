@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    public abstract class User
+    public abstract class Player
     {
         public string name;
         public string score;
-
-        public abstract void sendGesture();
-        public virtual void chooseName()
-        {
-            Console.WriteLine("The name is Arty Intelly");
-        }
+        public abstract void SendGesture();
+        public abstract void ChooseName();
 
     }
 
