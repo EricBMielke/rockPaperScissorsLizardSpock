@@ -36,6 +36,8 @@ namespace RPSLS
                 Console.WriteLine("Invalid selection. Please retry and use the word 'AI' or 'human'");
             }
             BattleResults();
+            CompareScores();
+            Retry();
 
         }
         public void BattleResults()
@@ -223,6 +225,15 @@ namespace RPSLS
             else
             {
                 BattleResults();
+            }
+        }
+        public void Retry()
+        {
+            Console.WriteLine("Incorrect type of input from Player 1");
+            string retryResponse = Console.ReadLine();
+            if (retryResponse == "true")
+            {
+                RunGame();
             }
         }
     }

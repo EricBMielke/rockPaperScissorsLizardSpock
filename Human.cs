@@ -19,7 +19,7 @@ namespace RPSLS
         public override void SendGesture()
         {
             Console.WriteLine("What action do you choose? (Scissors/Rock/Paper/Lizard/Spock");
-            string humanGesture = Console.ReadLine();
+            string humanGesture = Console.ReadLine();   
         }
     }
 }

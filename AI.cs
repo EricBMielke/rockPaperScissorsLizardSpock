@@ -13,21 +13,15 @@ namespace RPSLS
         string[] gestures = new string[] { "Scissors","Rock","Paper","Lizard","Spock" };
         public override void SendGesture()
         {
-            Console.WriteLine("What action do you choose? (Scissors/Rock/Paper/Lizard/Spock");
-            string humanGesture = Console.ReadLine();
+            Random rand = new Random();
+            string index = rand.Next(gestures.Count);
+            var gesture = gestures[index];
+            return gesture;
         }
         public override void ChooseName()
         {
             string userName = "Arty Intelligence";
-            Console.WriteLine("User 2 is " + userName);
+            Console.WriteLine("Player 2 is " + userName);
         }
-        // string returnSelection(string gestures)
-        //{
-        //    Random rand = new Random();
-        //    string index = rand.Next(gestures.Count);
-        //    var gesture = gestures[index];
-        //    gestures.RemoveAt(index);
-        //    return gesture;
-        //}
     }
 }
