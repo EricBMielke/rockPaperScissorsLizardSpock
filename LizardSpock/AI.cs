@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 
 namespace LizardSpock
 {
-    public class AI : Player
+    public class AI : Player 
     {
         public string userName;
         public string humanGesture;
         string[] gestures = new string[] { "Scissors", "Rock", "Paper", "Lizard", "Spock" };
         public override string SendGesture()
         {
-            //           Random rand = new Random();
-            //            string index = rand.Next(gestures.Count);
-            //            var gesture = gestures[index];
-            //            return gesture;
-            return "foo";
-       }
+            Random rnd = new Random();
+            int gestureNumber  = rnd.Next(4);
+            string actualGesture = gestures[gestureNumber];
+            return actualGesture;
+        }
         public override void ChooseName()
         {
             string userName = "Arty Intelligence";

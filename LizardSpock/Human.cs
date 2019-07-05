@@ -18,7 +18,7 @@ namespace LizardSpock
         }
         public override string SendGesture()
         {
-            Console.WriteLine("What action do you choose? (Scissors/Rock/Paper/Lizard/Spock)");
+            Console.WriteLine("What action do you choose? (Scissors/Rock/Paper/Lizard/Spock) ");
             string humanGesture = Console.ReadLine();
             return humanGesture;
         }
