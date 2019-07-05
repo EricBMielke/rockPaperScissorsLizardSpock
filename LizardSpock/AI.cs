@@ -13,11 +13,11 @@ namespace LizardSpock
         string[] gestures = new string[] { "Scissors", "Rock", "Paper", "Lizard", "Spock" };
         public override void SendGesture()
         {
-            Random rand = new Random();
-            string index = rand.Next(gestures.Count);
-            var gesture = gestures[index];
-            return gesture;
-        }
+//           Random rand = new Random();
+//            string index = rand.Next(gestures.Count);
+//            var gesture = gestures[index];
+//            return gesture;
+       }
         public override void ChooseName()
         {
             string userName = "Arty Intelligence";

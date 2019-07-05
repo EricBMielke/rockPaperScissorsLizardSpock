@@ -8,8 +8,8 @@ namespace LizardSpock
 {
     class Game
     {
-        public string firstAction;
-        public string secondAction;
+        public string firstAction = "nothing";
+        public string secondAction = "nothing";
         public string gameType;
         List<string> player1WinningRecord = new List<string>();
         List<string> player2WinningRecord = new List<string>();
@@ -24,12 +24,10 @@ namespace LizardSpock
             if (gameType == "human")
             {
                 Human player2 = new Human();
-                return player2;
             }
             else if (gameType == "AI")
             {
                 AI player2 = new AI();
-                return player2;
             }
             else
             {
@@ -42,8 +40,8 @@ namespace LizardSpock
         }
         public void BattleResults()
         {
-            string firstAction = player1.SendGesture();
-            string secondAction = player2.SendGesture();
+            //string firstAction = player1.SendGesture();
+            //string secondAction = player2.SendGesture();
             if (firstAction == "Rock")
             {
                 switch (secondAction)
@@ -212,15 +210,13 @@ namespace LizardSpock
         }
         public void CompareScores()
         {
-            if (player1WinningRecord.Length = 2)
+            if (player1WinningRecord.Count == 2)
             {
                 Console.WriteLine("Player 1 wins!");
-                return true;
             }
-            else if (player2WinningRecord = 2)
+            else if (player2WinningRecord.Count == 2)
             {
                 Console.WriteLine("Player 2 wins!");
-                return true;
             }
             else
             {

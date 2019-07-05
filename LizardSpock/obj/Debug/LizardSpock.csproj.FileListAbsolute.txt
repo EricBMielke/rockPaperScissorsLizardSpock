@@ -1,0 +1,7 @@
+C:\Users\Eric\source\repos\LizardSpock\LizardSpock\obj\Debug\LizardSpock.csprojAssemblyReference.cache
+C:\Users\Eric\source\repos\LizardSpock\LizardSpock\obj\Debug\LizardSpock.csproj.CoreCompileInputs.cache
+C:\Users\Eric\source\repos\LizardSpock\LizardSpock\bin\Debug\LizardSpock.exe.config
+C:\Users\Eric\source\repos\LizardSpock\LizardSpock\bin\Debug\LizardSpock.exe
+C:\Users\Eric\source\repos\LizardSpock\LizardSpock\bin\Debug\LizardSpock.pdb
+C:\Users\Eric\source\repos\LizardSpock\LizardSpock\obj\Debug\LizardSpock.exe
+C:\Users\Eric\source\repos\LizardSpock\LizardSpock\obj\Debug\LizardSpock.pdb
