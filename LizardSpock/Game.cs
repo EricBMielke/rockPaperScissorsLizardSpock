@@ -13,21 +13,25 @@ namespace LizardSpock
         public string gameType;
         List<string> player1WinningRecord = new List<string>();
         List<string> player2WinningRecord = new List<string>();
+        Player player1;
+        Player player2;
+
+
         public void RunGame()
         {
-            Console.WriteLine("RPSLS has two game battle settings: against AI or human. Who are you choosing to battle against? ");
+            Console.WriteLine("RPSLS has two game battle settings: against AI or human. Who are you choosing to battle against?");
 
             string gameType = Console.ReadLine();
-            Player player1;
+      
             player1 = new Human();
             player1.ChooseName();
             if (gameType == "human")
             {
-                Human player2 = new Human();
+                player2 = new Human();
             }
             else if (gameType == "AI")
             {
-                AI player2 = new AI();
+                player2 = new AI();
             }
             else
             {
@@ -40,8 +44,8 @@ namespace LizardSpock
         }
         public void BattleResults()
         {
-            //string firstAction = player1.SendGesture();
-            //string secondAction = player2.SendGesture();
+            string firstAction = player1.SendGesture();
+            string secondAction = player2.SendGesture();
             if (firstAction == "Rock")
             {
                 switch (secondAction)
@@ -225,7 +229,7 @@ namespace LizardSpock
         }
         public void Retry()
         {
-            Console.WriteLine("Incorrect type of input from Player 1");
+            Console.WriteLine("Would you like to retry?");
             string retryResponse = Console.ReadLine();
             if (retryResponse == "true")
             {

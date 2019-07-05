@@ -10,7 +10,7 @@ namespace LizardSpock
     {
         public string name;
         public string score;
-        public abstract void SendGesture();
+        public abstract string SendGesture();
         public abstract void ChooseName();
 
     }
