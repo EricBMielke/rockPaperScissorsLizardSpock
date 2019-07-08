@@ -8,20 +8,16 @@ namespace LizardSpock
 {
     class Game
     {
-        public string firstAction = "nothing";
-        public string secondAction = "nothing";
-        List<string> player1WinningRecord = new List<string>();
-        List<string> player2WinningRecord = new List<string>();
         Player player1;
         Player player2;
-        public string gameType;
 
         public void RunGame()
         {
+            string gameType;
             do
             {
                 Console.WriteLine("RPSLS has two game battle settings: against AI or human. Who are you choosing to battle against?");
-                string gameType = Console.ReadLine();
+                gameType = Console.ReadLine();
                 player1 = new Human();
                 player1.ChooseName();
                 if (gameType == "human")
@@ -38,7 +34,7 @@ namespace LizardSpock
                 }
             }
             //This while loop is currently broken, it forever loops
-            while (gameType != "human" || gameType != "AI");
+            while (gameType != "human" && gameType != "AI");
             BattleResults();
             CompareScores();
             Console.WriteLine("Would you like to retry?");
@@ -60,20 +56,20 @@ namespace LizardSpock
                     switch (secondAction)
                     {
                         case "Scissors":
-                            Console.WriteLine("User 1 wins.");
-                            player1WinningRecord.Add("Win");
+                            Console.WriteLine("Player 1 wins.");
+                            player1.winningRecord.Add("Win");
                             break;
                         case "Lizard":
-                            Console.WriteLine("User 1 wins.");
-                            player1WinningRecord.Add("Win");
+                            Console.WriteLine("Player 1 wins.");
+                            player1.winningRecord.Add("Win");
                             break;
                         case "Spock":
-                            Console.WriteLine("User 2 wins.");
-                            player2WinningRecord.Add("Win");
+                            Console.WriteLine("Player 2 wins.");
+                            player2.winningRecord.Add("Win");
                             break;
                         case "Paper":
-                            Console.WriteLine("User 2 wins.");
-                            player2WinningRecord.Add("Win");
+                            Console.WriteLine("Player 2 wins.");
+                            player2.winningRecord.Add("Win");
                             break;
                         case "Rock":
                             Console.WriteLine("Tie.");
@@ -93,20 +89,20 @@ namespace LizardSpock
                             Console.WriteLine("Tie.");
                             break;
                         case "Lizard":
-                            Console.WriteLine("User 1 wins.");
-                            player1WinningRecord.Add("Win");
+                            Console.WriteLine("Player 1 wins.");
+                            player1.winningRecord.Add("Win");
                             break;
                         case "Paper":
-                            Console.WriteLine("User 1 wins.");
-                            player1WinningRecord.Add("Win");
+                            Console.WriteLine("Player 1 wins.");
+                            player1.winningRecord.Add("Win");
                             break;
                         case "Rock":
-                            Console.WriteLine("User 2 wins.");
-                            player2WinningRecord.Add("Win");
+                            Console.WriteLine("Player 2 wins.");
+                            player2.winningRecord.Add("Win");
                             break;
                         case "Spock":
-                            Console.WriteLine("User 2 wins.");
-                            player2WinningRecord.Add("Win");
+                            Console.WriteLine("Player 2 wins.");
+                            player2.winningRecord.Add("Win");
                             break;
                         default:
                             Console.WriteLine("Incorrect type of input from Player 2");
@@ -119,23 +115,23 @@ namespace LizardSpock
                     switch (secondAction)
                     {
                         case "Scissors":
-                            Console.WriteLine("User 2 wins.");
-                            player2WinningRecord.Add("Win");
+                            Console.WriteLine("Player 2 wins.");
+                            player2.winningRecord.Add("Win");
                             break;
                         case "Lizard":
-                            Console.WriteLine("User 2 wins.");
-                            player2WinningRecord.Add("Win");
+                            Console.WriteLine("Player 2 wins.");
+                            player2.winningRecord.Add("Win");
                             break;
                         case "Spock":
-                            Console.WriteLine("User 1 wins.");
-                            player1WinningRecord.Add("Win");
+                            Console.WriteLine("Player 1 wins.");
+                            player1.winningRecord.Add("Win");
                             break;
                         case "Paper":
                             Console.WriteLine("Tie.");
                             break;
                         case "Rock":
-                            Console.WriteLine("User 1 wins.");
-                            player1WinningRecord.Add("Win");
+                            Console.WriteLine("Player 1 wins.");
+                            player1.winningRecord.Add("Win");
                             break;
                         default:
                             Console.WriteLine("Incorrect type of input from Player 2");
@@ -147,23 +143,23 @@ namespace LizardSpock
                     switch (secondAction)
                     {
                         case "Scissors":
-                            Console.WriteLine("User 2 wins.");
-                            player2WinningRecord.Add("Win");
+                            Console.WriteLine("Player 2 wins.");
+                            player2.winningRecord.Add("Win");
                             break;
                         case "Lizard":
                             Console.WriteLine("Tie.");
                             break;
                         case "Spock":
-                            Console.WriteLine("User 1 wins.");
-                            player1WinningRecord.Add("Win");
+                            Console.WriteLine("Player 1 wins.");
+                            player1.winningRecord.Add("Win");
                             break;
                         case "Paper":
-                            Console.WriteLine("User 1 wins.");
-                            player1WinningRecord.Add("Win");
+                            Console.WriteLine("Player 1 wins.");
+                            player1.winningRecord.Add("Win");
                             break;
                         case "Rock":
-                            Console.WriteLine("User 2 wins.");
-                            player2WinningRecord.Add("Win");
+                            Console.WriteLine("Player 2 wins.");
+                            player2.winningRecord.Add("Win");
                             break;
                         default:
                             Console.WriteLine("Incorrect type of input from Player 2");
@@ -177,23 +173,23 @@ namespace LizardSpock
                     switch (secondAction)
                     {
                         case "Scissors":
-                            Console.WriteLine("User 1 wins.");
-                            player1WinningRecord.Add("Win");
+                            Console.WriteLine("Player 1 wins.");
+                            player1.winningRecord.Add("Win");
                             break;
                         case "Lizard":
-                            Console.WriteLine("User 2 wins.");
-                            player2WinningRecord.Add("Win");
+                            Console.WriteLine("Player 2 wins.");
+                            player2.winningRecord.Add("Win");
                             break;
                         case "Spock":
                             Console.WriteLine("Tie.");
                             break;
                         case "Paper":
                             Console.WriteLine("User 2 wins.");
-                            player2WinningRecord.Add("Win");
+                            player2.winningRecord.Add("Win");
                             break;
                         case "Rock":
-                            Console.WriteLine("User 1 wins.");
-                            player1WinningRecord.Add("Win");
+                            Console.WriteLine("Player 1 wins.");
+                            player1.winningRecord.Add("Win");
                             break;
                         default:
                             Console.WriteLine("Incorrect type of input from Player 2");
@@ -206,17 +202,17 @@ namespace LizardSpock
                     BattleResults();
                 }
             }
-            while (player1WinningRecord.Count == 2 || player2WinningRecord.Count == 2);
+            while (player1.winningRecord.Count != 2 && player2.winningRecord.Count != 2);
         }
         public void CompareScores()
         {
-            if (player1WinningRecord.Count == 2)
+            if (player1.winningRecord.Count == 2)
             {
-                Console.WriteLine("Player 1 wins!");
+                Console.WriteLine("Player 1 wins the best of 3 series!");
             }
-            else if (player2WinningRecord.Count == 2)
+            else if (player2.winningRecord.Count == 2)
             {
-                Console.WriteLine("Player 2 wins!");
+                Console.WriteLine("Player 2 wins the best of 3 series!");
             }
         }
     }

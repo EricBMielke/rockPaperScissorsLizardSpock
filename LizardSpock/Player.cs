@@ -9,7 +9,8 @@ namespace LizardSpock
     public abstract class Player
     {
         public string name;
-        public string score;
+        public List<string> winningRecord = new List<string>();
+
         public abstract string SendGesture();
         public abstract void ChooseName();
 
