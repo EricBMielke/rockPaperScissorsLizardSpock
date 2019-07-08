@@ -11,14 +11,15 @@ namespace LizardSpock
         public string name;
         public string humanGesture;
 
-        public override void ChooseName()
+        public override string ChooseName()
         {
             Console.WriteLine("What is your name?");
             string name = Console.ReadLine();
+            return name;
         }
         public override string SendGesture()
         {
-            Console.WriteLine("What action do you choose? (Scissors/Rock/Paper/Lizard/Spock) ");
+            Console.WriteLine("What action do you choose? (Scissors/Rock/Paper/Lizard/Spock)");
             string humanGesture = Console.ReadLine();
             return humanGesture;
         }

@@ -25,10 +25,11 @@ namespace LizardSpock
             Console.WriteLine("AI has selected "+ actualGesture);
             return actualGesture;
         }
-        public override void ChooseName()
+        public override string ChooseName()
         {
             string userName = "Arty Intelligence";
             Console.WriteLine("Player 2 is " + userName);
+            return userName;
         }
     }
 }
