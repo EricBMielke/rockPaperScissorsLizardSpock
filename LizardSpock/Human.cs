@@ -8,13 +8,13 @@ namespace LizardSpock
 {
     public class Human : Player
     {
-        public string userName;
+        public string name;
         public string humanGesture;
 
         public override void ChooseName()
         {
             Console.WriteLine("What is your name?");
-            string userName = Console.ReadLine();
+            string name = Console.ReadLine();
         }
         public override string SendGesture()
         {
