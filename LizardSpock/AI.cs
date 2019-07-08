@@ -22,6 +22,7 @@ namespace LizardSpock
             Random rnd = new Random();
             int gestureNumber  = rnd.Next(4);
             string actualGesture = gestureList[gestureNumber];
+            Console.WriteLine("AI has selected "+ actualGesture);
             return actualGesture;
         }
         public override void ChooseName()

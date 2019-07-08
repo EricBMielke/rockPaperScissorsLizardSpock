@@ -32,6 +32,7 @@ namespace LizardSpock
                 {
                     Console.WriteLine("Invalid selection. Please retry and use the word 'AI' or 'human'");
                 }
+                player2.ChooseName();
             }
             //This while loop is currently broken, it forever loops
             while (gameType != "human" && gameType != "AI");
@@ -39,7 +40,7 @@ namespace LizardSpock
             CompareScores();
             Console.WriteLine("Would you like to retry?");
             string retryResponse = Console.ReadLine();
-            if (retryResponse == "true")
+            if (retryResponse == "yes" || retryResponse == "Yes" || retryResponse == "yeah")
             {
                 RunGame();
             }
